@@ -1,7 +1,11 @@
 
 /*
  *= require rails_bootstrap_forms
+
  */
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
+// Don't put any custom css before bootstrap
 @import "bootstrap";
+@import "test.scss";
