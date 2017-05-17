@@ -42,8 +42,12 @@ p {
   line-height: 1.5;
   margin-bottom: 20px;
 }
+div {
+  width: 100%;
+}
 .bg-primary {
   background-color: #F05F40;
+
 }
 .bg-dark {
   background-color: #222222;
@@ -212,17 +216,17 @@ header .header-content .header-content-inner p {
   margin-top: 0;
 }
 .service-box {
-  max-width: 400px;
-  margin: 50px auto 0;
+  width: auto;
+  margin: 0 auto 0;
 }
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
   .service-box {
     margin: 20px auto 0;
   }
 }
 .service-box p {
   margin-bottom: 0;
-}
+}*/
 .portfolio-box {
   position: relative;
   display: block;
