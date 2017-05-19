@@ -15,3 +15,10 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+//= require creative.min.js
+//= require creative.js
+//= require jquery.magnific-popup.js
+//= require jquery.magnific-popup.min.js
+//= require scrollreveal.min.js
+//= require scrollreveal.js
+
