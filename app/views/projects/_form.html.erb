@@ -12,22 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :country %>
+    <%= f.label :"What country is the property in?" %>
     <%= f.text_field :country %>
   </div>
 
   <div class="field">
-    <%= f.label :region %>
+    <%= f.label :"What region is the property in?" %>
     <%= f.text_field :region %>
   </div>
 
   <div class="field">
-    <%= f.label :contractor %>
-    <%= f.text_field :contractor %>
+    <%= f.label :"What type of contractor do you need?" %>
+    <%= f.collection_select :contractor, Contractor.all, :name, :name, {disabled: '--Select the contractor type--', selected: '--Select the contractor type--' } %>
   </div>
 
   <div class="field">
-    <%= f.label :timing %>
+    <%= f.label :"When would you like the job to start?" %>
     <%= f.collection_select :timing, Timing.all, :time, :time, {disabled: '--Select the timing--', selected: '--Select the timing--' } %>
   </div>
 
@@ -37,34 +37,30 @@
     <%= f.text_field :job %>
   </div> -->
 
-  <div class="field">
-    <%= f.label :start %>
-    <%= f.text_field :start %>
-  </div>
 
   <div class="field">
-    <%= f.label :budget %>
+    <%= f.label :"What is your approximate budget?" %>
     <%= f.text_field :budget %>
   </div>
 
   <div class="field">
-    <%= f.label :property %>
-    <%= f.text_field :property %>
+    <%= f.label :"Which type of property?" %>
+    <%= f.collection_select :property, Property.all, :property, :property, {disabled: '--Select the property type--', selected: '--Select the property type--' } %>
   </div>
 
   <div class="field">
-    <%= f.label :postal %>
+    <%= f.label :"What's the postal code?" %>
     <%= f.text_field :postal %>
   </div>
 
   <div class="field">
     <%= f.label :preference %>
-    <%= f.text_field :preference %>
+    <%= f.collection_select :preference, Preference.all, :preference, :preference %>
   </div>
 
   <div class="field">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.label :"Please write the description for your job" %>
+    <%= f.text_area :description %>
   </div>
 
   <div class="actions">
