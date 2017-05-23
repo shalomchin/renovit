@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  country: MyString
+  region: MyString
+  contractor: MyString
+  timing: MyString
+  job: MyString
+  start: MyString
+  budget: MyString
+  property: MyString
+  postal: MyString
+  preference: MyString
+  description: MyString
+
+two:
+  country: MyString
+  region: MyString
+  contractor: MyString
+  timing: MyString
+  job: MyString
+  start: MyString
+  budget: MyString
+  property: MyString
+  postal: MyString
+  preference: MyString
+  description: MyString

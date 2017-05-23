@@ -1,0 +1,72 @@
+<%= form_for(project) do |f| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= f.label :region %>
+    <%= f.text_field :region %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contractor %>
+    <%= f.text_field :contractor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :timing %>
+    <%= f.text_field :timing %>
+  </div>
+
+  <div class="field">
+    <%= f.label :job %>
+    <%= f.text_field :job %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start %>
+    <%= f.text_field :start %>
+  </div>
+
+  <div class="field">
+    <%= f.label :budget %>
+    <%= f.text_field :budget %>
+  </div>
+
+  <div class="field">
+    <%= f.label :property %>
+    <%= f.text_field :property %>
+  </div>
+
+  <div class="field">
+    <%= f.label :postal %>
+    <%= f.text_field :postal %>
+  </div>
+
+  <div class="field">
+    <%= f.label :preference %>
+    <%= f.text_field :preference %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

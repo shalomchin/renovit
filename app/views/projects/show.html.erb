@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @project.country %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @project.region %>
+</p>
+
+<p>
+  <strong>Contractor:</strong>
+  <%= @project.contractor %>
+</p>
+
+<p>
+  <strong>Timing:</strong>
+  <%= @project.timing %>
+</p>
+
+<p>
+  <strong>Job:</strong>
+  <%= @project.job %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @project.start %>
+</p>
+
+<p>
+  <strong>Budget:</strong>
+  <%= @project.budget %>
+</p>
+
+<p>
+  <strong>Property:</strong>
+  <%= @project.property %>
+</p>
+
+<p>
+  <strong>Postal:</strong>
+  <%= @project.postal %>
+</p>
+
+<p>
+  <strong>Preference:</strong>
+  <%= @project.preference %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
