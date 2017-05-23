@@ -23,14 +23,19 @@
                 <ul class="nav navbar-nav navbar-right">
                 
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <%= link_to('About', welcome_index_path(anchor: "about")) %>
                     </li>
-                    <li>
+
+                   <!--  <li>
                         <a class="page-scroll" href="#services">How it works</a>
+                    </li> -->
+                    <li>
+                        <%= link_to('Testimony', welcome_index_path(anchor: "price")) %>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#price">Testimony</a>
+                        <%= link_to('Get Started', new_project_path) %>
                     </li>
+
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
