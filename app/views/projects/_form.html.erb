@@ -1,4 +1,5 @@
-<%= form_for(project) do |f| %>
+
+<%= bootstrap_form_for(project, layout: :horizontal, label_col: "col-sm-6", control_col: "col-sm-6") do |f| %>
   <% if project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
@@ -12,23 +13,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :"What country is the property in?" %>
-    <%= f.text_field :country %>
+    
+    <%= f.text_field :country, label: "What country is the property in?" %>
   </div>
 
   <div class="field">
-    <%= f.label :"What region is the property in?" %>
-    <%= f.text_field :region %>
+    <%= f.text_field :region, label:"What region is the property in?" %>
   </div>
 
   <div class="field">
-    <%= f.label :"What type of contractor do you need?" %>
-    <%= f.collection_select :contractor, Contractor.all, :name, :name, {disabled: '--Select the contractor type--', selected: '--Select the contractor type--' } %>
+    <%= f.collection_select :contractor, Contractor.all, :name, :name , {disabled: '--Select the contractor type--', selected: '--Select the contractor type--', label: "What type of contractor do you need?" } %>
   </div>
 
   <div class="field">
-    <%= f.label :"When would you like the job to start?" %>
-    <%= f.collection_select :timing, Timing.all, :time, :time, {disabled: '--Select the timing--', selected: '--Select the timing--' } %>
+    <%= f.collection_select :timing, Timing.all, :time, :time, {disabled: '--Select the timing--', selected: '--Select the timing--', label:"When would you like the job to start?"  } %>
   </div>
 
 
@@ -39,39 +37,32 @@
 
 
   <div class="field">
-    <%= f.label :"What is your approximate budget?" %>
-    <%= f.text_field :budget %>
+    <%= f.text_field :budget, label:"What is your approximate budget?" %>
   </div>
 
   <div class="field">
-    <%= f.label :"Which type of property?" %>
-    <%= f.collection_select :property, Property.all, :property, :property, {disabled: '--Select the property type--', selected: '--Select the property type--' } %>
+    <%= f.collection_select :property, Property.all, :property, :property, {disabled: '--Select the property type--', selected: '--Select the property type--', label:"Which type of property?"  } %>
   </div>
 
   <div class="field">
-    <%= f.label :"What's the postal code?" %>
-    <%= f.text_field :postal %>
+    <%= f.text_field :postal, label:"What's the postal code?" %>
   </div>
 
   <div class="field">
-    <%= f.label :"What is your mobile number?" %>
-    <%= f.text_field :mobile %>
+    <%= f.text_field :mobile, label:"What is your mobile number?" %>
   </div>
 
   <div class="field">
-    <%= f.label :preference %>
-    <%= f.collection_select :preference, Preference.all, :preference, :preference %>
+    <%= f.collection_select :preference, Preference.all, :preference, :preference, label:"When do you prefer to be contacted?" %>
   </div>
 
   <div class="field">
-    <%= f.label :"Please write the description for your job" %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, rows: 5, label:"Please write the description for your job:" %>
   </div>
 
 
   <div class="field">
-    <%= f.label :"Our service includes project management support through phone, skype and email. Would yo prefer in peron support for 5% at your project costs" %>
-    <%= f.text_area :question %>
+    <%= f.text_area :question, label:"Our service includes project management support through phone, skype and email. Would you prefer in peron support for 5% at your project costs?" %>
   </div>
 
   <div class="actions">
