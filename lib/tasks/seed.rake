@@ -39,23 +39,23 @@ namespace :seed do
 
   desc "This populates contractor table"
   task :contractor => :environment do
-    Contractor.create([ { type: '--Select the contractor type--' },
-                      { type: 'Air-conditioning Contractor' },
-                      { type: 'Bathroom Contractor' },
-                      { type: 'Carpenter' },
-                      { type: 'Electrician' },
-                      { type: 'Flooring Contractor' },
-                      { type: 'Landscaping Contractor' },
-                      { type: 'General Contractor' },
-                      { type: 'Kitchen Contractor' },
-                      { type: 'Painter' },
-                      { type: 'Plumber' },
-                      { type: 'Renovation Contractor / Interior Designer' },
-                      { type: 'Roofing / Waterproofing Contractor' },
-                      { type: 'Swimming Pool / Water Feature' },
-                      { type: 'Tiling Contractor' },
-                      { type: 'Window / Glass Contractor' },
-                      { type: 'Handyman' }
+    Contractor.create([ { name: '--Select the contractor type--' },
+                      { name: 'Air-conditioning Contractor' },
+                      { name: 'Bathroom Contractor' },
+                      { name: 'Carpenter' },
+                      { name: 'Electrician' },
+                      { name: 'Flooring Contractor' },
+                      { name: 'Landscaping Contractor' },
+                      { name: 'General Contractor' },
+                      { name: 'Kitchen Contractor' },
+                      { name: 'Painter' },
+                      { name: 'Plumber' },
+                      { name: 'Renovation Contractor / Interior Designer' },
+                      { name: 'Roofing / Waterproofing Contractor' },
+                      { name: 'Swimming Pool / Water Feature' },
+                      { name: 'Tiling Contractor' },
+                      { name: 'Window / Glass Contractor' },
+                      { name: 'Handyman' }
                     ])
   end
 

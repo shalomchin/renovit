@@ -17,7 +17,7 @@ class ContractorsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create contractor" do
     assert_difference('Contractor.count') do
-      post contractors_url, params: { contractor: { type: @contractor.type } }
+      post contractors_url, params: { contractor: { name: @contractor.name } }
     end
 
     assert_redirected_to contractor_url(Contractor.last)
@@ -34,7 +34,7 @@ class ContractorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update contractor" do
-    patch contractor_url(@contractor), params: { contractor: { type: @contractor.type } }
+    patch contractor_url(@contractor), params: { contractor: { name: @contractor.name } }
     assert_redirected_to contractor_url(@contractor)
   end
 

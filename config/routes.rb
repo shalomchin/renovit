@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   
+  resources :contractors
   resources :preferences
   resources :properties
   resources :timings
-  resources :contractors
   resources :projects
   devise_for :users, :controllers => { registrations: 'registrations' }
   get 'welcome/index'
