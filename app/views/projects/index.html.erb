@@ -14,8 +14,10 @@
       <th>Budget</th>
       <th>Property</th>
       <th>Postal</th>
+      <th>Mobile</th>
       <th>Preference</th>
       <th>Description</th>
+      <th>Question</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -32,8 +34,10 @@
         <td><%= project.budget %></td>
         <td><%= project.property %></td>
         <td><%= project.postal %></td>
+        <td><%= project.mobile %></td>
         <td><%= project.preference %></td>
         <td><%= project.description %></td>
+        <td><%= project.question %></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
         <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>

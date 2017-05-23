@@ -54,6 +54,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :"What is your mobile number?" %>
+    <%= f.text_field :mobile %>
+  </div>
+
+  <div class="field">
     <%= f.label :preference %>
     <%= f.collection_select :preference, Preference.all, :preference, :preference %>
   </div>
@@ -61,6 +66,12 @@
   <div class="field">
     <%= f.label :"Please write the description for your job" %>
     <%= f.text_area :description %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :"Our service includes project management support through phone, skype and email. Would yo prefer in peron support for 5% at your project costs" %>
+    <%= f.text_area :question %>
   </div>
 
   <div class="actions">
