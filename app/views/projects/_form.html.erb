@@ -28,8 +28,9 @@
 
   <div class="field">
     <%= f.label :timing %>
-    <%= f.text_field :timing %>
+    <%= f.collection_select :timing, Timing.all, :time, :time, {disabled: '--Select the timing--', selected: '--Select the timing--' } %>
   </div>
+
 
 <!--   <div class="field">
     <%= f.label :job %>
@@ -70,3 +71,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+
