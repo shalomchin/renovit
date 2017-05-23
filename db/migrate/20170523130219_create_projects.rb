@@ -5,7 +5,7 @@ class CreateProjects < ActiveRecord::Migration[5.0]
       t.string :region
       t.string :contractor
       t.string :timing
-      
+      t.string :job
       t.string :start
       t.string :budget
       t.string :property
