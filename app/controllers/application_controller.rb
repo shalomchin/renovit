@@ -13,10 +13,8 @@ class ApplicationController < ActionController::Base
       session[:project] = nil
  
       #redirect
-      flash[:notice] = "Sweet, logged in. Nice project, btw :)"      
-      # redirect_to user_project_path(@project.user, @project)
-      # redirect_to user_project_path(@project.user, @project)
-      redirect_to welcome_index_path
+      flash[:notice] = "Your project has been submitted. We will contact you within the next 48 hours."      
+      project_path(@project)
  
     else
       #if there is not temp list in the session proceed as normal
