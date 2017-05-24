@@ -33,8 +33,9 @@ class ProjectsController < ApplicationController
      redirect_to new_user_registration_path    
  
   else
-      @project = Project.new(project_params)
-
+      # @project = Project.new(project_params)
+      # If the user is already logged in, proceed as normal
+    @project = current_user.projects.new(project_params)
       respond_to do |format|
         if @project.save
           format.html { redirect_to @project, notice: 'Project was successfully created.' }
