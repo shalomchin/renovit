@@ -1,3 +1,5 @@
+<br><br><br>
+<div class="container" id="contact">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -15,19 +17,19 @@
   <%= @project.contractor %>
 </p>
 
-<p>
-  <strong>Timing:</strong>
+<!-- <p>
+  <strong>Project Timing:</strong>
   <%= @project.timing %>
-</p>
+</p> -->
 
-<p>
+<!-- <p>
   <strong>Job:</strong>
   <%= @project.job %>
-</p>
+</p> -->
 
 <p>
   <strong>Start:</strong>
-  <%= @project.start %>
+  <%= @project.timing %>
 </p>
 
 <p>
@@ -41,12 +43,12 @@
 </p>
 
 <p>
-  <strong>Postal:</strong>
+  <strong>Postal code:</strong>
   <%= @project.postal %>
 </p>
 
 <p>
-  <strong>Preference:</strong>
+  <strong>Preference to call:</strong>
   <%= @project.preference %>
 </p>
 
@@ -55,5 +57,11 @@
   <%= @project.description %>
 </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
+<p>
+  <strong>Our service includes project management support through phone, skype and email. Would you prefer in-person support for 5% at your project costs?</strong>
+  <%= @project.question %>
+</p>
+
+
 <%= link_to 'Back', projects_path %>
+</div>
