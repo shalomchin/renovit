@@ -6,7 +6,11 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    if current_user.admin?
+      @projects = Project.all
+    else
+      redirect_to welcome_index_path
+    end
   end
 
   # GET /projects/1
@@ -27,15 +31,15 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     if current_user.nil?
-     # Store the form data in the session so we can retrieve it after login
-     session[:project] = params
-     # Redirect the user to register/login
-     redirect_to new_user_registration_path    
- 
-  else
+      # Store the form data in the session so we can retrieve it after login
+      session[:project] = params
+      # Redirect the user to register/login
+      redirect_to new_user_registration_path
+
+    else
       # @project = Project.new(project_params)
       # If the user is already logged in, proceed as normal
-    @project = current_user.projects.new(project_params)
+      @project = current_user.projects.new(project_params)
       respond_to do |format|
         if @project.save
           format.html { redirect_to @project, notice: 'Project was successfully created.' }
