@@ -56,7 +56,8 @@
                     <h2 class="section-heading">We've got what you need!</h2>
                     <hr class="light">
                     <p class="text-faded">Find the best and cheapest qoutes online. Tell us what your construction project is by signing up and submitting a project.</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Sign Up Now!</a>
+                    
+                    <%= link_to('Sign Up Now', new_user_registration_path, class:"page-scroll btn btn-default btn-xl sr-button") %>
                 </div>
             </div>
         </div>
@@ -209,7 +210,7 @@
             <div class="call-to-action">
                 <h2>Have a project in mind?</h2>
                
-                <%= link_to 'Start Your Project!', new_project_path, class: "page-scroll btn btn-default btn-xl sr-button"  %> 
+                <%= link_to 'Start Your Project', new_project_path, class: "page-scroll btn btn-default btn-xl sr-button"  %> 
             </div>
         </div>
     </aside>
